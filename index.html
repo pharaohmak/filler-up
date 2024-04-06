@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Makram Ibrahim
-    August 22, 2022
-    CE06: HTML Forms-->
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="styles.css">
 
-    <title>3.6 Code Exercise 06: HTML Forms</title>
+    <title>Fill'er Up</title>
 </head>
 
 <body>
-
-    <!-- Problem #1 – Fill'er Up -->
     <h1> Fill'er Up</h1>
     <h3>Convert Gallons to Quarts, Pints, or Cups</h3>
     <p>Type in the numer of gallons and ill convert to desired type</p>
@@ -46,40 +40,11 @@
         <input id="cup-result" type="number" value="" placeholder="press button to convert"><label for="cup">
             Cups</label>
     </form>
+
     <br><br><br>
-
-    <!-- Problem #2 - Movie Star -->
-    <h1>Movie Star</h1>
-    <h3>Enter the total number of movies you have in multiple formats and determine what ranking they are in a movie
-        club.</h3>
-
-    <form id="problem2">
-
-        <!-- Input for the number of DVDs. Make sure this can accept only positive whole numbers.  -->
-        <label for="dvds">Amount Of DVDs</label> <br> <input type="number" name="dvds" id="dvds" required>
-        <br><br>
-        <!-- Input for the number of Blu-Rays. Make sure this can accept only positive whole numbers. -->
-        <label for="blue-ray">Amount of Blue-Rays</label> <br> <input type="number" name="blue-rays" id="blue-rays"
-            required>
-        <br><br>
-        <!-- Input for the number of UltraViolets. Make sure this can accept only positive whole numbers. -->
-        <label for="ultra-violet">Amount of UltraViolets</label> <br> <input type="number" name="ultra-violets"
-            id="ultra-violets" required>
-        <br><br>
-
-        <!-- A button that starts the process. -->
-        <input type="button" name="rank-btn" id="rank-btn" value="RANK">
-
-        <!-- An empty H1 tag that will hold the final results: Total Number Of Movies Owned -->
-        <h1 id="rank-result"></h1>
-
-        <!-- An Image that will change based on the number of movies the user owns  -->
-        <img id="rank-img" src="#" alt="">
-
     </form>
 
-
-    <script src="./JS/main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
