@@ -1,40 +1,41 @@
-# Fill'er Up
+# Gallon Conversion Calculator
 
-A simple and efficient tool to convert gallons to quarts, pints, or cups.
+## Overview
+This JavaScript application converts a given number of gallons into quarts, pints, or cups based on user selection. It provides a simple interface where users can input the number of gallons and choose the desired conversion type.
 
 ## Features
-
-- User-friendly interface
-- Real-time conversions
-- Supports multiple units of measurement
+- Converts gallons to quarts, pints, or cups based on user selection.
+- Dynamically updates the conversion results on button click.
 
 ## Usage
+1. Enter the number of gallons in the input field.
+2. Select the desired conversion type (Quart, Pint, or Cup) using radio buttons.
+3. Click the "Convert" button to see the conversion results.
 
-To use Fill'er Up, simply enter the number of gallons you'd like to convert and select the desired unit of measurement. The converted value will then be displayed in real-time.
+## Code Explanation
+The JavaScript code attached to the "Convert" button performs the following:
+- Retrieves the input value (gallons) from the user.
+- Validates and checks the selected radio button for conversion type (quart, pint, or cup).
+- Calculates the conversion based on the selected radio button.
+- Updates the respective result fields (quart-result, pint-result, cup-result) with the calculated values.
 
-## Styling
+## Example
+If you enter `5` gallons and select "Quart" for conversion:
+- The application calculates `5 * 4 = 20` quarts.
+- Updates the Quart result field with `20`.
 
-The styling for Fill'er Up is handled using CSS. Here's a snippet of the code used for styling:
+Similarly, selecting "Pint" would convert `5` gallons to `5 * 8 = 40` pints.
 
-```css
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    flex-direction: column;
-}
+## Installation
+No installation required. Simply download or clone the repository and open `index.html` in a web browser to use the application.
 
-form {
-    text-align: center;
-}
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
 
-h1 {
-    font-size: 3em;
-}
+## Contributing
+Contributions are welcome! Fork the repository and submit a pull request with your improvements.
 
-h3 {
-    font-size: 2em;
-}
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
