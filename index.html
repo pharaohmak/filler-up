@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="styles.css">
-
-    <title>Fill'er Up</title>
+    <title>Gallon Converter</title>
 </head>
 
 <body>
-    <h1> Fill'er Up</h1>
-    <h3>Convert Gallons to Quarts, Pints, or Cups</h3>
-    <p>Type in the numer of gallons and ill convert to desired type</p>
-    <!-- Conversion Form -->
-    <form id="problem1">
-        <!-- Gallons user has-->
-        <input id="gallons" type="number" required> # of gallons
-
-        <br><br>
-        <!-- Radio Buttons to Choose type of conversion Type -->
-        <input id="quart" type="radio" name="quart" value="0"><label for="quart">Quarts</label>
-        <input id="pint" type="radio" name="pint" value="0"><label for="pint">Pints</label>
-        <input id="cup" type="radio" name="cup" value="0"><label for="cup">Cups</label>
-        <br><br>
-        <!-- Button to Start Conversion -->
-        <input type="button" id="convert" value="CONVERT">
-        <br><br>
-
-        <h2>Results</h2>
-        <!-- Conversion Results -->
-        <input id="quart-result" type="number" value="" placeholder="press button to convert"><label for="quart-result">
-            Quarts</label>
-        <br><br>
-        <input id="pint-result" type="number" value="" placeholder="press button to convert"><label for="pint">
-            Pints</label>
-        <br><br>
-        <input id="cup-result" type="number" value="" placeholder="press button to convert"><label for="cup">
-            Cups</label>
-    </form>
-
-    <br><br><br>
-    </form>
-
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                <h1>Gallon Converter</h1>
+                <h3>Convert Gallons to Quarts, Pints, or Cups</h3>
+                <p>Type in the number of gallons and I'll convert to desired type</p>
+                <!-- Conversion Form -->
+                <form id="problem1">
+                    <!-- Gallons user has-->
+                    <input id="gallons" type="number" required placeholder="# of gallons"> 
+                    <br><br>
+                    <!-- Radio Buttons to Choose type of conversion Type -->
+                    <input id="quart" type="radio" name="conversion" value="quart"><label for="quart">Quarts</label>
+                    <input id="pint" type="radio" name="conversion" value="pint"><label for="pint">Pints</label>
+                    <input id="cup" type="radio" name="conversion" value="cup"><label for="cup">Cups</label>
+                    <br><br>
+                    <!-- Button to Start Conversion -->
+                    <input type="button" id="convert" value="CONVERT">
+                    <br><br>
+                </form>
+            </div>
+            <div class="results" style="display: none;">
+                <h2>Results</h2>
+                <!-- Conversion Results -->
+                <input id="quart-result" type="number" value="" placeholder="Quarts" readonly><label for="quart-result">
+                    Quarts</label>
+                <br><br>
+                <input id="pint-result" type="number" value="" placeholder="Pints" readonly><label for="pint">
+                    Pints</label>
+                <br><br>
+                <input id="cup-result" type="number" value="" placeholder="Cups" readonly><label for="cup">
+                    Cups</label>
+            </div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 

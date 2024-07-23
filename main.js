@@ -1,28 +1,33 @@
-// Target Button
-document.querySelector('#convert').addEventListener("click", function (e) {
-    // Get Value From User Input
-    gallons = document.querySelector('#gallons').value;
-    // Validate Checked Radio Button
-    let quarts = document.querySelector("#quart").checked;
-    let pints = document.querySelector("#pint");
-    let cups = document.querySelector("#cup");
+document.getElementById('convert').addEventListener('click', function() {
+    const gallons = parseFloat(document.getElementById('gallons').value);
+    const conversionType = document.querySelector('input[name="conversion"]:checked').value;
 
-    // Calculate Conversion
-    if (document.querySelector("#quart").checked === true) { // Convert Gallons to Quarts
-        quarts = gallons * 4;
-        document.querySelector("#quart-result").value = quarts;
-        document.querySelector("#pint-result").value = 0;
-        document.querySelector("#cup-result").value = 0
-    } else if (document.querySelector('#pint').checked === true) { // Convert Gallons to Pints
-        pints = gallons * 8;
-        document.querySelector("#pint-result").value = pints;
-        document.querySelector("#quart-result").value = 0;
-        document.querySelector("#cup-result").value = 0;
+    if (isNaN(gallons) || !conversionType) {
+        alert('Please enter a number of gallons and select a conversion type.');
+        return;
     }
-    else { // Convert Gallons to Cups
-        cups = gallons * 16;
-        document.querySelector("#cup-result").value = cups
-        document.querySelector("#pint-result").value = 0;
-        document.querySelector("#quart-result").value = 0
+
+    let result;
+    switch (conversionType) {
+        case 'quart':
+            result = gallons * 4;
+            document.getElementById('quart-result').value = result;
+            document.getElementById('pint-result').value = '';
+            document.getElementById('cup-result').value = '';
+            break;
+        case 'pint':
+            result = gallons * 8;
+            document.getElementById('quart-result').value = '';
+            document.getElementById('pint-result').value = result;
+            document.getElementById('cup-result').value = '';
+            break;
+        case 'cup':
+            result = gallons * 16;
+            document.getElementById('quart-result').value = '';
+            document.getElementById('pint-result').value = '';
+            document.getElementById('cup-result').value = result;
+            break;
     }
-})
+
+    document.querySelector('.results').style.display = 'block';
+});
